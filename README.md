@@ -8,7 +8,54 @@ This project allows you to transcribe and summarize meetings by recording audio 
 - **Summary**: Generate summaries of the transcribed text using GPT-4.
 - **Download Options**: Download the transcription and summary in text and DOCX formats.
 
-## Prerequisites
+## Quick Start with Web App
+
+You can try out the Meeting Note Generator right away by visiting the deployed web app:
+
+[Meeting Note Generator Web App](https://meetingsummary-bombfriedrice.replit.app/)
+
+### Prerequisite for Web App
+
+To use the web app, you need to install BlackHole on your Mac to capture system audio and microphone audio.
+
+### BlackHole Installation and Configuration
+
+1. **Download and Install BlackHole**
+
+   - Download the `BlackHole-2ch.pkg` file from the project directory on GitHub.
+   - Open the downloaded `.pkg` file and follow the installation instructions.
+
+2. **Verify Installation**
+
+   - Open the `Audio MIDI Setup` application on your Mac (found in Applications > Utilities).
+   - Click the `+` button at the bottom left corner and select `Create Multi-Output Device`.
+   - In the new Multi-Output Device, check the boxes next to `BlackHole 16ch` and your `MacBook Air Speakers`.
+
+3. **Create Aggregate Device**
+
+   - In the Audio MIDI Setup, click the `+` button again and select `Create Aggregate Device`.
+   - Check the boxes next to `MacBook Air Microphone` and `BlackHole 16ch`.
+
+4. **Set Aggregate Device as Input Source**
+
+   - Go to `System Settings` > `Sound` > `Input` tab and select `Aggregate Device`.
+
+5. **Set Multi-Output Device as System Output**
+
+   - Go to `System Settings` > `Sound` > `Output` tab and select `Multi-Output Device`.
+
+6. **Recording the Audio**
+
+   - Open `QuickTime Player` and select `File` > `New Audio Recording`.
+   - Next to the record button, click the small arrow and select `Aggregate Device` as the input source.
+   - Start your Google Meet or Zoom meeting and ensure that your system audio output is set to the `Multi-Output Device`.
+   - Start recording in QuickTime Player.
+
+## Local Setup
+
+Follow these steps to set up the project on your local machine.
+
+### Prerequisites
 
 - Python 3.8+
 - Streamlit
